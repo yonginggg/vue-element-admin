@@ -84,6 +84,30 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/simulation',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/simulation/index'),
+        name: 'Simulation',
+        meta: { title: 'Simulation', icon: 'el-icon-edit-outline', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/process',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/process/index'),
+        name: 'Process',
+        meta: { title: 'Process', icon: 'el-icon-mobile', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
